@@ -60,5 +60,7 @@ namespace Todo.Core
                 _items.AddRange(Items);
             } 
         }
+
+        public TodoItem GetItem(Guid id) => _items.FirstOrDefault(i => i.Id == id);
     }
 }
